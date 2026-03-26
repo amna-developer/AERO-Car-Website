@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=Y0Gmn6ZRBPfz&format=png&color=000000" type="image/x-icon">
+    <title>AERO | The Art of Progress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#050505] text-white antialiased selection:bg-red-600">
+
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-500" id="main-nav">
+        <div class="max-w-[1600px] mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="logo text-3xl font-black italic tracking-tighter">AERO</div>
+            <div class="hidden lg:flex space-x-12 text-[11px] font-bold uppercase tracking-[0.4em]">
+                <a href="#fleet" class="nav-link">Models</a>
+                <a href="#performance" class="nav-link text-gray-400">Technology</a>
+                <a href="#design" class="nav-link text-gray-400">Design</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <i data-lucide="search" class="w-5 h-5 cursor-pointer hover:text-red-600 transition"></i>
+                <button class="border border-white/20 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                    Configure
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-end pb-20 px-8 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=90&w=2400" 
+                 class="w-full h-full object-cover scale-110" id="hero-img" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl opacity-0 translate-y-10 animate-reveal">
+            <p class="text-red-600 font-bold tracking-[0.6em] uppercase text-xs mb-4">Leading the Charge</p>
+            <h1 class="text-6xl md:text-[120px] font-black uppercase tracking-tighter leading-[0.85] mb-8">
+                FUTURE IS <br><span class="italic text-outline">ELECTRIC</span>
+            </h1>
+            <p class="text-gray-400 max-w-md text-sm leading-relaxed mb-8 tracking-wide">
+                Experience the convergence of peak aerodynamic efficiency and raw performance. The new RS-GT platform defines the next decade of mobility.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#fleet" class="bg-red-600 px-10 py-5 text-[10px] font-bold uppercase tracking-[0.2em] hover:pr-14 transition-all relative group">
+                    View Range
+                    <span class="absolute right-4 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="performance" class="py-32 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div class="stat-item border-l-2 border-red-600 pl-8">
+                <h2 class="text-6xl font-black mb-2 italic">2.4<span class="text-2xl text-red-600">s</span></h2>
+                <p class="text-xs uppercase tracking-widest font-bold text-gray-500">0—100 km/h</p>
+            </div>
+            <div class="stat-item border-l-2 border-zinc-200 pl-8">
+                <h2 class="text-6xl font-black mb-2 italic">750<span class="text-2xl text-red-600">hp</span></h2>
+                <p class="text-xs uppercase tracking-widest font-bold text-gray-500">Peak Output</p>
+            </div>
+            <div class="stat-item border-l-2 border-zinc-200 pl-8">
+                <h2 class="text-6xl font-black mb-2 italic">22<span class="text-2xl text-red-600">min</span></h2>
+                <p class="text-xs uppercase tracking-widest font-bold text-gray-500">80% Charge Speed</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="design" class="py-20">
+        <div class="flex flex-col">
+            <div class="flex flex-col md:flex-row h-screen">
+                <div class="md:w-1/2 p-20 flex flex-col justify-center">
+                    <span class="text-red-600 font-bold mb-4 italic">01 / Aesthetics</span>
+                    <h3 class="text-5xl font-black uppercase mb-6 italic">Sculpted by <br> the Wind</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">Every line serves a purpose. The Aero-Active flaps adjust in real-time to balance downforce and cooling, ensuring stability at 300km/h.</p>
+                    <button class="text-[10px] font-black uppercase tracking-[0.4em] border-b border-red-600 w-fit pb-2">Learn More</button>
+                </div>
+                <div class="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fleet" class="py-32 px-8 bg-zinc-950">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex justify-between items-end mb-20">
+                <h3 class="text-6xl font-black uppercase italic tracking-tighter">The Lineup</h3>
+                <div class="flex space-x-8">
+                    <button onclick="filterCars('all')" class="filter-btn active">All Series</button>
+                    <button onclick="filterCars('suv')" class="filter-btn">E-SUV</button>
+                    <button onclick="filterCars('sport')" class="filter-btn">Performance</button>
+                </div>
+            </div>
+            <div id="car-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                </div>
+        </div>
+    </section>
+
+    <section class="py-40 bg-red-600 text-white text-center px-8">
+        <h4 class="text-xs uppercase tracking-[0.8em] mb-8 font-bold">Join the Circle</h4>
+        <h2 class="text-4xl md:text-6xl font-black italic uppercase mb-12">Stay Ahead of the Curve</h2>
+        <div class="max-w-xl mx-auto flex border-b border-white pb-4">
+            <input type="email" placeholder="ENTER EMAIL ADDRESS" class="bg-transparent border-none outline-none w-full placeholder:text-white/50 text-xs tracking-widest">
+            <button class="text-xs font-bold uppercase tracking-widest">Submit</button>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-white/5 px-8">
+        <div class="flex justify-between items-center text-[10px] text-gray-600 tracking-[0.3em] font-bold uppercase">
+            <span>&copy; 2026 AERO GLOBAL</span>
+            <div class="space-x-8">
+                <a href="#">Privacy</a>
+                <a href="#">Configurator</a>
+                <a href="#">Dealers</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
